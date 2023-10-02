@@ -1,0 +1,737 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+*::selection{
+    color: rgb(231, 214, 191);
+    background-color: black;
+}
+.cursor{
+    height: 15vw;
+    width: 15vw;
+    background-color: rgba(0, 255, 0, 0.637);
+    border-radius: 50%;
+    position: fixed;
+    z-index: -1;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+.navSection{
+    margin-top: 1.5vw;
+    height: 5vw;
+    width: 100%;
+    font-family: helvetica;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    position: fixed;
+}
+.NavSection1 h2 {
+    margin-left: 2vw;
+    font-size: 2.2vw;
+    line-height: 1.9vw;
+    font-family: helvetica;
+}
+
+.NavSection2{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    position: relative;
+    bottom: 2vw;
+
+}
+.NavSection2 .item a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8vw;
+    margin-right: 2vw;
+    opacity: 0.7;
+}
+.NavSection2 .item a:hover{
+    color: #4b4b48;
+    border-bottom: 1px solid black;
+    transition: 0.4s ease-in-out;
+}
+.icon{
+    margin-right: 2vw;
+    background: rgb(118, 126, 231);
+    height: 2vw;
+    width: 10vw;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* --------- Nav Bar Done ------------- */
+.page1{
+    min-height: 190vh;
+    width: 100%;
+    padding-top: 15vw;
+}
+#heading {
+    font-size: 16vw;
+    font-family: futura;
+    line-height: 13.4vw;
+    letter-spacing: -10.5px;
+    text-transform: uppercase;
+    padding-left: 1vw;
+    position: relative;
+    bottom: 2vw;
+
+}
+#vidContainer{      
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#play{
+    background: black;
+    font-family: futura;
+    height: 7vw;
+    width: 7vw;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+    opacity: 0;
+    scale: 0;
+    /* transform: translate(-50%,-50%); */
+}
+
+#vidContainer video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding-left: 1vw;
+}
+ /*----------- Page 1 Done ----------------*/
+.buygood{
+    margin: 2vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    position: relative;
+    top: 1vw;
+    font-family: helvetica;
+    font-size: 0.7vw;
+    opacity: 0.7;
+}
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .elem{
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.elem1{
+    height: 100%;
+    width: 34%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.elem1 img{
+    width: 90%;
+    object-fit: cover;
+}
+.elem2 img{
+    width: 90%;
+    object-fit: cover;
+}
+.elem3 img{
+    width: 90%;
+    object-fit: cover;
+}
+.elem2{
+    height: 100%;
+    width: 34%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem3{
+    height: 100%;
+    width: 34%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page2Bottom{
+    min-height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading{
+    height: 16vw;
+    width: 43%;
+}
+.heading h1 {
+    font-family: futura;
+    font-size: 3.5vw;
+    letter-spacing: -1px;
+    margin-left: 2vw;
+    margin-top: 3vw;
+}
+.extratext{
+    height: 16vw;
+    width: 33%;
+}
+.extratext p{
+    font-family: helvetica;
+    font-size: 18px;
+    margin-top: 3vw;
+}
+
+/* --------- Page 2 Done ---------- */
+
+.page3{
+    margin-top: 12vw;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 13vw;
+}
+.sellImg{
+    height: 55vh;
+    width: 40%;
+    margin: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.sellImg img {
+    height: 38vw;
+}
+.sellImg p {
+    font-family: helvetica;
+    text-align: center;
+    font-size: 12px;
+}
+#sellImgbtm{
+    margin-top: 15vw;
+}
+
+/* -------- Page 3 Done ---------- */
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+}
+.option{
+    height: 8vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 4vw;
+}
+.optionItem{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+.ring{
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    margin-right: 5vw;
+    background-color: transparent;
+}
+.optionItem h2{
+    font-family: helvetica;
+    font-size: 1.5vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+.executeBoard{
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1vw;
+}
+.executeBoard h1 {
+    font-family: futura;
+    font-size: 4.3vw;
+    line-height: 4.2vw;
+    margin-top: 2vw;
+
+}
+.executeBoard button {
+    height: 3.3vw;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-radius: 2vw;
+    margin-top: 5vw;
+    font-weight: 600;
+    font-family: helvetica;
+    
+}
+.executeBoard p {
+    margin-top: 2vw;
+    font-family: helvetica;
+}
+
+/* -------- Page 4 Done ---------- */
+
+.page5{
+    position: relative;
+    top: 5vw;
+    min-height: 120vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.page5text{
+    height: 95vh;
+    width: 31.5%;
+}
+.page5text h2{
+    font-family: futura;
+}
+.page5text p{
+    font-family: helvetica;
+    position: relative;
+    top: 2vw;
+    font-size: 1vw;
+    line-height: 1.7vw;
+}
+.page5img1{
+    height: 95vh;
+    width: 31.5%;
+}
+.page5img1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.page5img2{
+    height: 95vh;
+    width: 31.5%;
+}
+.page5img2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* -------Page 5 Done------- */
+
+
+.lastpage{
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.part1{
+    height: 38vh;
+    width: 100%;
+    margin-top: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.social p{
+    font-family: helvetica;
+    opacity: 0.5;
+    font-weight: 600;
+    font-size: 0.9vw;
+    margin-left: 1.5vw;
+    margin-bottom: 1vw;
+}
+.social a{
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    margin-left: 1.5vw;
+    
+}
+.social a:hover{
+    color: rgb(134, 127, 127);
+    transition: 0.2s ease;
+}
+#icon{
+    height: 100%;
+    width: 30%;
+}
+#icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.faq{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    align-items: end;
+}
+.faq p{
+    font-family: helvetica;
+    opacity: 0.5;
+    font-weight: 600;
+    font-size: 0.9vw;
+    margin-right: 1.5vw;
+    margin-bottom: 1vw;
+}
+.faq a{
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    margin-right: 1.5vw;
+}
+.faq a:hover{
+    color: rgb(134, 127, 127);
+    transition: 0.2s ease;
+}
+/* ------part 1 Done------ */
+.part2{
+    height: 30vh;
+    width: 100%;
+    margin-top: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.part2 p {
+    text-align: center;
+    font-family: helvetica;
+}
+.creator{
+    height: 2vw;
+    width: 10%;
+    background-color: black;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.creator a {
+    text-decoration: none;
+    color: #f7f7f7;
+    font-family: futura;
+}
+
+/* ------------Responsive--------------------- */
+
+@media(max-width:400px) {
+    .navSection{
+        margin-top: 8.5vw;
+    }
+    
+    .NavSection2{
+        bottom: 6vw;
+        height: 1vw;
+        width: 58%;
+    
+    }
+    .NavSection2 .item a {
+        font-size: 2vw;
+    }
+    
+    .icon{
+        height: 5vw;
+        width: 18vw;
+        border-radius: 2vw;
+    }
+    /* --------- Nav Bar Done ------------- */
+    .page1{
+        min-height: 77vh;
+        padding-top: 31vw;
+    }
+    #heading {
+        line-height: 13.4vw;
+        letter-spacing: -2.5px;
+    
+    }
+    #vidContainer{      
+        height: 45vh;
+    }
+    #play{
+        height: 11vw;
+        width: 11vw;
+    }
+    
+    #vidContainer video {
+        height: 88%;
+    }
+     /*----------- Page 1 Done ----------------*/
+    .buygood{
+        font-size: 2vw;
+    }
+    
+    .page2{
+        min-height: 39vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .elem1{
+        height: 100%;
+        width: 100%;
+        
+    }
+    .elem2{
+        height: 100%;
+        width: 100%;
+    }
+    .elem3{
+        height: 100%;
+        width: 100%;
+    }
+    .page2Bottom {
+        min-height: 31vh;
+        justify-content: space-evenly;
+        font-size: 5vw;
+    }
+    .heading {
+        height: 39vw;
+        width: 40%;
+    }
+    .heading h1 {
+        font-size: 4.5vw;
+    }
+    .extratext {
+        height: 39vw;
+        width: 60%;
+    }
+    .extratext p{
+        font-size: 14px;
+    }
+    
+    /* --------- Page 2 Done ---------- */
+    
+    .page3{
+        margin-top: 15vw;
+    margin-bottom: 6vw;
+    }
+    .sellImg{
+        height: 38vh;
+        width: 33%;
+        margin: 1vw;
+    
+    }
+    .sellImg img {
+        height: 38vw;
+    }
+    .sellImg p {
+        font-family: helvetica;
+        text-align: center;
+        font-size: 12px;
+    }
+    #sellImgbtm{
+        margin-top: 15vw;
+    }
+    
+    /* -------- Page 3 Done ---------- */
+    
+    .page4{
+        min-height: 46vh;
+        width: 100%;
+    }
+    .option{
+        height: 8vw;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 4vw;
+    }
+    .optionItem{
+        height: 100%;
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5vw;
+    }
+    .ring{
+        height: 2vw;
+        width: 2vw;
+    }
+    .optionItem h2{
+        font-size: 2.5vw;
+    }
+    .executeBoard{
+        min-height: 40vh;
+    }
+    .executeBoard h1 {
+        font-size: 5.3vw;
+        line-height: 5.2vw;
+    }
+    .executeBoard button {
+        height: 10.3vw;
+        width: 56vw;
+        border-radius: 5vw;
+    }
+    .executeBoard p {
+        margin-top: 2vw;
+        font-family: helvetica;
+    }
+    
+    /* -------- Page 4 Done ---------- */
+    
+    .page5 {
+        min-height: 96vh;
+        width: 100%;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .page5text {
+        height: 30vh;
+        width: 97%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .page5text h2{
+        font-family: futura;
+    }
+    .page5text p {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+        text-align: center;
+    }
+    .page5img1 {
+        height: 95vh;
+        width: 97%;
+    }
+
+    .page5img2 {
+        height: 95vh;
+        width: 97%;
+    }
+    /* -------Page 5 Done------- */
+    
+    
+    .lastpage{
+        min-height: 80vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .part1{
+        height: 38vh;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .social {
+        height: 50%;
+        width: 20%;
+    }
+    .social p{
+        font-family: helvetica;
+        opacity: 0.5;
+        font-weight: 600;
+        font-size: 1.9vw;
+        margin-left: 1.5vw;
+        margin-bottom: 1vw;
+    }
+    .social a{
+        text-decoration: none;
+        color: black;
+        font-size: 2vw;
+        margin-left: 1.5vw;
+        
+    }
+
+    #icon {
+        height: 70%;
+        width: 50%;
+        position: relative;
+    }
+    #icon img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .faq {
+        height: 50%;
+        width: 21%;
+    }
+    .faq p{
+        font-size: 1.9vw;
+    }
+    .faq a{
+        font-size: 2vw;
+    }
+    /* ------part 1 Done------ */
+
+    .part2 p {
+        font-size: 3.5vw;
+        line-height: 13px;
+    }
+    .creator {
+        position: relative;
+        height: 6vw;
+        width: 49%;
+        border-radius: 3vw;
+        top: 2vw;
+    }
+
+}
